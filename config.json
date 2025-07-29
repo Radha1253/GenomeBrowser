@@ -1,4 +1,10 @@
 {
+  "plugins": [
+    {
+      "name": "Template",
+      "url": "plugins/jbrowse-plugin-template.umd.production.min.js"
+    }
+  ],
   "assemblies": [
     {
       "name": "hg19",
@@ -42,8 +48,7 @@
         "adapter": {
           "type": "CytobandAdapter",
           "cytobandLocation": {
-            "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/hg19/cytoBand.txt",
-            "locationType": "UriLocation"
+            "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/hg19/cytoBand.txt"
           }
         }
       }
@@ -86,8 +91,7 @@
         "adapter": {
           "type": "CytobandAdapter",
           "cytobandLocation": {
-            "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/cytoBand.txt",
-            "locationType": "UriLocation"
+            "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/cytoBand.txt"
           }
         }
       }
@@ -111,6 +115,116 @@
           "locationType": "UriLocation"
         }
       }
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "ncbi_refseq_109_hg38",
+      "name": "NCBI RefSeq analysis set (GFF3Tabix)",
+      "assemblyNames": [
+        "hg38"
+      ],
+      "category": [
+        "Annotation"
+      ],
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": {
+          "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/ncbi_refseq/GCA_000001405.15_GRCh38_full_analysis_set.refseq_annotation.sorted.gff.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/ncbi_refseq/GCA_000001405.15_GRCh38_full_analysis_set.refseq_annotation.sorted.gff.gz.tbi",
+            "locationType": "UriLocation"
+          }
+        }
+      }
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "ncbi_gff_hg19",
+      "name": "NCBI RefSeq (GFF3Tabix)",
+      "assemblyNames": [
+        "hg19"
+      ],
+      "category": [
+        "Annotation"
+      ],
+      "metadata": {
+        "source": "https://www.ncbi.nlm.nih.gov/genome/guide/human/",
+        "dateaccessed": "12/03/2020"
+      },
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": {
+          "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/hg19/ncbi_refseq/GRCh37_latest_genomic.sort.gff.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/hg19/ncbi_refseq/GRCh37_latest_genomic.sort.gff.gz.tbi",
+            "locationType": "UriLocation"
+          }
+        }
+      }
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "nclist_genes_hg19",
+      "name": "Gencode v19",
+      "assemblyNames": [
+        "hg19"
+      ],
+      "category": [
+        "Annotation"
+      ],
+      "adapter": {
+        "type": "NCListAdapter",
+        "rootUrlTemplate": {
+          "uri": "https://jbrowse.org/genomes/hg19/gencode/{refseq}/trackData.json",
+          "locationType": "UriLocation"
+        },
+        "refNames": [
+          "chr1",
+          "chr2",
+          "chr3",
+          "chr4",
+          "chr5",
+          "chr6",
+          "chr7",
+          "chr8",
+          "chr9",
+          "chr10",
+          "chr11",
+          "chr12",
+          "chr13",
+          "chr14",
+          "chr15",
+          "chr16",
+          "chr17",
+          "chr18",
+          "chr19",
+          "chr20",
+          "chr21",
+          "chr22",
+          "chr23",
+          "chrX",
+          "chrY",
+          "chrMT"
+        ]
+      },
+      "displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "nclist_genes_hg19_linear",
+          "renderer": {
+            "type": "SvgFeatureRenderer",
+            "labels": {
+              "description": "jexl:get(feature,'gene_name')"
+            }
+          }
+        }
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -183,6 +297,64 @@
           "locationType": "UriLocation"
         }
       }
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "gencode_nclist_hg38",
+      "name": "Gencode v32",
+      "assemblyNames": [
+        "hg38"
+      ],
+      "category": [
+        "Annotation"
+      ],
+      "adapter": {
+        "type": "NCListAdapter",
+        "rootUrlTemplate": {
+          "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/gencode/{refseq}/trackData.jsonz",
+          "locationType": "UriLocation"
+        },
+        "refNames": [
+          "chr1",
+          "chr2",
+          "chr3",
+          "chr4",
+          "chr5",
+          "chr6",
+          "chr7",
+          "chr8",
+          "chr9",
+          "chr10",
+          "chr11",
+          "chr12",
+          "chr13",
+          "chr14",
+          "chr15",
+          "chr16",
+          "chr17",
+          "chr18",
+          "chr19",
+          "chr20",
+          "chr21",
+          "chr22",
+          "chr23",
+          "chrX",
+          "chrY",
+          "chrMT"
+        ]
+      },
+      "displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "gencode_nclist_hg38_linear",
+          "renderer": {
+            "type": "SvgFeatureRenderer",
+            "labels": {
+              "description": "jexl:get(feature,'gene_name')"
+            }
+          }
+        }
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -285,6 +457,1148 @@
           "locationType": "UriLocation"
         }
       }
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "gencode.v36.annotation.sort.gff3",
+      "name": "Gencode v36",
+      "category": [
+        "Annotation"
+      ],
+      "assemblyNames": [
+        "hg38"
+      ],
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": {
+          "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/gencode/gencode.v36.annotation.sort.gff3.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/gencode/gencode.v36.annotation.sort.gff3.gz.tbi",
+            "locationType": "UriLocation"
+          },
+          "indexType": "TBI"
+        }
+      }
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "gencode.v36lift37.annotation.sort.gff3",
+      "name": "Gencode v36 (GRCh37 liftover)",
+      "category": [
+        "Annotation"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ],
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": {
+          "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/hg19/gencode/gencode.v36lift37.annotation.sort.gff3.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/hg19/gencode/gencode.v36lift37.annotation.sort.gff3.gz.tbi",
+            "locationType": "UriLocation"
+          },
+          "indexType": "TBI"
+        }
+      }
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "variant_allele_freq",
+      "name": "Variant Allele Frequencies",
+      "assemblyNames": [
+        "hg38"
+      ],
+      "category": [
+        "Custom Variants"
+      ],
+      "adapter": {
+        "type": "FromConfigAdapter",
+        "features": [
+          {
+            "uniqueId": "var001",
+            "refName": "chr1",
+            "start": 999990,
+            "end": 1000010,
+            "name": "rs12345 (AF=0.15)",
+            "score": 150
+          },
+          {
+            "uniqueId": "var002",
+            "refName": "chr1",
+            "start": 1001990,
+            "end": 1002010,
+            "name": "rs67890 (AF=0.65)",
+            "score": 650
+          },
+          {
+            "uniqueId": "var003",
+            "refName": "chr1",
+            "start": 1003990,
+            "end": 1004010,
+            "name": "rs11111 (AF=0.95)",
+            "score": 950
+          }
+        ]
+      },
+      "displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "variant_basic_display",
+          "renderer": {
+            "type": "SvgFeatureRenderer",
+            "displayMode": "compact",
+            "height": 4,
+            "color1": "jexl:get(feature,'score') > 800 ? 'red' : get(feature,'score') > 500 ? 'orange' : get(feature,'score') > 200 ? 'yellow' : 'green'"
+          }
+        }
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_aa_na_total",
+      "name": "nhp_any_aa_na_total",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_aa_na_total.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_aa_vir_length",
+      "name": "nhp_any_aa_vir_length",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_aa_vir_length.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_aa_vir_position",
+      "name": "nhp_any_aa_vir_position",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_aa_vir_position.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_na_total",
+      "name": "nhp_any_na_total",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_na_total.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_obs",
+      "name": "nhp_any_obs",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_obs.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_oe_23",
+      "name": "nhp_any_oe_23",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_oe_23.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_oe_47",
+      "name": "nhp_any_oe_47",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_oe_47.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_oe_93",
+      "name": "nhp_any_oe_93",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_oe_93.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_prob_mu",
+      "name": "nhp_any_prob_mu",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_prob_mu.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_sum_23_exp",
+      "name": "nhp_any_sum_23_exp",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_sum_23_exp.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_sum_23_obs",
+      "name": "nhp_any_sum_23_obs",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_sum_23_obs.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_sum_47_exp",
+      "name": "nhp_any_sum_47_exp",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_sum_47_exp.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_sum_47_obs",
+      "name": "nhp_any_sum_47_obs",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_sum_47_obs.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_sum_93_exp",
+      "name": "nhp_any_sum_93_exp",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_sum_93_exp.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_sum_93_obs",
+      "name": "nhp_any_sum_93_obs",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_sum_93_obs.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_vir_length",
+      "name": "nhp_any_vir_length",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_vir_length.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_vir_position",
+      "name": "nhp_any_vir_position",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_any_vir_position.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_aa_na_total",
+      "name": "nhp_mis_aa_na_total",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_aa_na_total.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_aa_vir_length",
+      "name": "nhp_mis_aa_vir_length",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_aa_vir_length.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_aa_vir_position",
+      "name": "nhp_mis_aa_vir_position",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_aa_vir_position.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_na_total",
+      "name": "nhp_mis_na_total",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_na_total.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_obs",
+      "name": "nhp_mis_obs",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_obs.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_oe_23",
+      "name": "nhp_mis_oe_23",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_oe_23.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_oe_47",
+      "name": "nhp_mis_oe_47",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_oe_47.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_oe_93",
+      "name": "nhp_mis_oe_93",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_oe_93.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_prob_mu",
+      "name": "nhp_mis_prob_mu",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_prob_mu.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_sum_23_exp",
+      "name": "nhp_mis_sum_23_exp",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_sum_23_exp.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_sum_23_obs",
+      "name": "nhp_mis_sum_23_obs",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_sum_23_obs.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_sum_47_exp",
+      "name": "nhp_mis_sum_47_exp",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_sum_47_exp.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_sum_47_obs",
+      "name": "nhp_mis_sum_47_obs",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_sum_47_obs.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_sum_93_exp",
+      "name": "nhp_mis_sum_93_exp",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_sum_93_exp.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_sum_93_obs",
+      "name": "nhp_mis_sum_93_obs",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_sum_93_obs.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_vir_length",
+      "name": "nhp_mis_vir_length",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_vir_length.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_mis_vir_position",
+      "name": "nhp_mis_vir_position",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_mis_vir_position.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_refs_lt15",
+      "name": "nhp_refs_lt15",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_refs_lt15.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_aa_na_total",
+      "name": "nhp_syn_aa_na_total",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_aa_na_total.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_aa_vir_length",
+      "name": "nhp_syn_aa_vir_length",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_aa_vir_length.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_aa_vir_position",
+      "name": "nhp_syn_aa_vir_position",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_aa_vir_position.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_na_total",
+      "name": "nhp_syn_na_total",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_na_total.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_obs",
+      "name": "nhp_syn_obs",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_obs.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_oe_23",
+      "name": "nhp_syn_oe_23",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_oe_23.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_oe_47",
+      "name": "nhp_syn_oe_47",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_oe_47.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_oe_93",
+      "name": "nhp_syn_oe_93",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_oe_93.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_prob_mu",
+      "name": "nhp_syn_prob_mu",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_prob_mu.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_sum_23_exp",
+      "name": "nhp_syn_sum_23_exp",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_sum_23_exp.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_sum_23_obs",
+      "name": "nhp_syn_sum_23_obs",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_sum_23_obs.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_sum_47_exp",
+      "name": "nhp_syn_sum_47_exp",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_sum_47_exp.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_sum_47_obs",
+      "name": "nhp_syn_sum_47_obs",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_sum_47_obs.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_sum_93_exp",
+      "name": "nhp_syn_sum_93_exp",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_sum_93_exp.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_sum_93_obs",
+      "name": "nhp_syn_sum_93_obs",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_sum_93_obs.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_vir_length",
+      "name": "nhp_syn_vir_length",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_vir_length.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
+    },
+    {
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_syn_vir_position",
+      "name": "nhp_syn_vir_position",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "nhp_syn_vir_position.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ]
     }
   ],
   "defaultSession": {
