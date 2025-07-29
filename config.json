@@ -879,7 +879,7 @@
       "assemblyNames": [
         "hg19"
       ]
-},
+    },
     {
       "type": "QuantitativeTrack",
       "trackId": "nhp_any_vir_position",
