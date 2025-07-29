@@ -852,7 +852,7 @@
       ],
       "assemblyNames": [
         "hg19"
-      ]
+      ],
      "displays": [
     {
       "type": "LinearWiggleDisplay",
