@@ -1,4 +1,11 @@
 {
+  "plugins": [
+    {
+      "name": "Template",
+      "url": "plugins/jbrowse-plugin-template.umd.production.min.js"
+    }
+  ],
+  
   "assemblies": [
     {
       "name": "hg19",
