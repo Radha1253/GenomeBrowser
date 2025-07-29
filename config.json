@@ -886,15 +886,15 @@
           "renderers": {
             "XYPlotRenderer": {
               "type": "XYPlotRenderer",
-              "color": "jexl:get(feature,'score') > 5 ? 'green' : 'red'"
+              "color": "jexl:score > 5 ? 'green' : 'red'"
             },
             "DensityRenderer": {
               "type": "DensityRenderer",
-              "color": "jexl:get(feature,'score') > 5 ? 'green' : 'red'"
+              "color": "jexl:score > 5 ? 'green' : 'red'"
             },
             "LinePlotRenderer": {
               "type": "LinePlotRenderer",
-              "color": "jexl:get(feature,'score') > 5 ? 'green' : 'red'"
+              "color": "jexl:score > 5 ? 'green' : 'red'"
             }
           },
           "defaultRenderer": "XYPlotRenderer"
