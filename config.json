@@ -1,10 +1,4 @@
 {
-  "plugins": [
-    {
-      "name": "Template",
-      "url": "plugins/jbrowse-plugin-template.umd.production.min.js"
-    }
-  ],
   "assemblies": [
     {
       "name": "hg19",
@@ -527,7 +521,7 @@
   "assemblyNames": [
     "hg19"
   ],
- "displays": [
+  "displays": [
     {
       "type": "LinearWiggleDisplay",
       "displayId": "nhp_any_aa_na_total-LinearWiggleDisplay",
