@@ -878,24 +878,7 @@
       ],
       "assemblyNames": [
         "hg19"
-      ],
-      "displays": [
-    {
-      "type": "LinearQuantitativeDisplay",
-      "displayId": "nhp_any_vir_length_display",
-      "renderers": {
-        "XYPlotRenderer": {
-          "type": "XYPlotRenderer",
-          "filled": true,
-          "color": "jexl:get(feature,'score') > 25 ? 'green' : 'red'"
-        },
-        "DensityRenderer": {
-          "type": "DensityRenderer",
-          "color": "jexl:get(feature,'score') > 25 ? 'green' : 'red'"
-        }
-      }
-    }
-  ]
+      ]
 },
     {
       "type": "QuantitativeTrack",
