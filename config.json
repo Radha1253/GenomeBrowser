@@ -846,17 +846,7 @@
       ],
       "assemblyNames": [
         "hg19"
-      ],
-      "displays": [
-    {
-      "type": "LinearWiggleDisplay",
-      "displayId": "nhp_any_vir_length-LinearWiggleDisplay",
-      "color": {
-        "type": "jexl",
-        "expr": "value > 5 ? 'green' : 'red'"
-      }
-    }
-  ]
+      ]
 },
     {
       "type": "QuantitativeTrack",
