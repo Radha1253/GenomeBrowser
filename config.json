@@ -502,52 +502,52 @@
         }
       }
     },
-   {
-  "type": "QuantitativeTrack",
-  "trackId": "nhp_any_aa_na_total",
-  "name": "nhp_any_aa_na_total",
-  "adapter": {
-    "type": "BigWigAdapter",
-    "bigWigLocation": {
-      "uri": "test_data/nhp_any_aa_na_total.bw",
-      "locationType": "UriLocation"
-    }
-  },
-  "category": [
-    "NHP",
-    "BigWig",
-    "Quantitative"
-  ],
-  "assemblyNames": [
-    "hg19"
-  ],
-  "displays": [
     {
-      "type": "LinearWiggleDisplay",
-      "displayId": "nhp_any_aa_na_total-LinearWiggleDisplay",
-      "color": {
-        "type": "jexl",
-        "expr": "value < 0 ? 'blue' : value > 10 ? 'red' : 'gray'"
+      "type": "QuantitativeTrack",
+      "trackId": "nhp_any_aa_na_total",
+      "name": "nhp_any_aa_na_total",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "test_data/nhp_any_aa_na_total.bw",
+          "locationType": "UriLocation"
+        }
       },
-      "posColor": "red",
-      "negColor": "blue",
-      "scaleType": "linear",
-      "minScore": 0,
-      "maxScore": {
-        "type": "jexl",
-        "expr": "max(20, maxValue)"
-      },
-      "fillColor": {
-        "type": "jexl",
-        "expr": "value > 15 ? 'rgba(255,0,0,0.6)' : value > 10 ? 'rgba(255,165,0,0.6)' : 'rgba(128,128,128,0.6)'"
-      },
-      "mouseoverLabel": {
-        "type": "jexl",
-        "expr": "'Value: ' + round(value, 2) + ' at ' + start + '-' + end"
-      }
-    }
-  ]
-},
+      "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+      ],
+      "assemblyNames": [
+        "hg19"
+      ],
+      "displays": [
+        {
+          "type": "LinearWiggleDisplay",
+          "displayId": "nhp_any_aa_na_total-LinearWiggleDisplay",
+          "color": {
+            "type": "jexl",
+            "expr": "value < 0 ? 'blue' : value > 10 ? 'red' : 'gray'"
+          },
+          "posColor": "red",
+          "negColor": "blue",
+          "scaleType": "linear",
+          "minScore": 0,
+          "maxScore": {
+            "type": "jexl",
+            "expr": "max(20, maxValue)"
+          },
+          "fillColor": {
+            "type": "jexl",
+            "expr": "value > 15 ? 'rgba(255,0,0,0.6)' : value > 10 ? 'rgba(255,165,0,0.6)' : 'rgba(128,128,128,0.6)'"
+          },
+          "mouseoverLabel": {
+            "type": "jexl",
+            "expr": "'Value: ' + round(value, 2) + ' at ' + start + '-' + end"
+          }
+        }
+      ]
+    },
     {
       "type": "QuantitativeTrack",
       "trackId": "nhp_any_aa_vir_length",
@@ -846,8 +846,18 @@
       ],
       "assemblyNames": [
         "hg19"
+      ],
+      "displays": [
+        {
+          "type": "LinearWiggleDisplay",
+          "displayId": "nhp_any_vir_length-LinearWiggleDisplay",
+          "color": {
+            "type": "jexl",
+            "expr": "value > 5 ? 'green' : 'red'"
+          }
+        }
       ]
-},
+    },
     {
       "type": "QuantitativeTrack",
       "trackId": "nhp_any_vir_position",
