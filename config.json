@@ -894,13 +894,12 @@
             },
             "LinePlotRenderer": {
               "type": "LinePlotRenderer",
-              "color": "jexl:score > 25 ? 'green' : 'red'"
+              "color": "jexl:score > 5 ? 'green' : 'red'"
             }
           }
         }
       ]
     },
-
     {
       "type": "QuantitativeTrack",
       "trackId": "nhp_any_vir_position",
