@@ -682,7 +682,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_any_oe_23_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -718,7 +718,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_any_oe_47_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -754,7 +754,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_any_oe_93_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -810,7 +810,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_any_sum_23_exp_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -846,7 +846,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_any_sum_23_obs_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -882,7 +882,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_any_sum_47_exp_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -918,7 +918,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_any_sum_47_obs_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -954,7 +954,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_any_sum_93_exp_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -990,7 +990,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_any_sum_93_obs_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1182,7 +1182,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_mis_oe_23_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1218,7 +1218,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_mis_oe_47_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1254,7 +1254,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_mis_oe_93_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1310,7 +1310,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_mis_sum_23_exp_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1346,7 +1346,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_mis_sum_23_obs_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1382,7 +1382,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_mis_sum_47_exp",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1418,7 +1418,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_mis_sum_47_obs_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1454,7 +1454,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_mis_sum_93_exp_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1490,7 +1490,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_mis_sum_93_obs_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1526,7 +1526,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_mis_vir_length_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1702,7 +1702,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_syn_oe_23_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1738,7 +1738,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_syn_oe_47_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1774,7 +1774,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_syn_oe_93_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1830,7 +1830,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_syn_sum_23_exp_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1866,7 +1866,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_syn_sum_23_obs_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1902,7 +1902,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_syn_sum_47_exp_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1938,7 +1938,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_syn_sum_47_obs_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
@@ -1970,6 +1970,22 @@
             ],
             "assemblyNames": [
                 "hg19"
+            ],
+            "displays": [
+                {
+                    "type": "LinearWiggleDisplay",
+                    "displayId": "nhp_syn_sum_93_exp_display",
+                    "renderers": {
+                        "XYPlotRenderer": {
+                            "type": "XYPlotRenderer",
+                            "color": "jexl:get(feature, 'score') > 7 ? 'green' : 'red'"
+                        },
+                        "DotPlotRenderer": {
+                            "type": "DensityRenderer",
+                            "color": "jexl:get(feature, 'score') > 7 ? 'green' : 'red'"
+                        }
+                    }
+                }
             ]
         },
         {
@@ -1994,7 +2010,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_syn_sum_93_obs_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
