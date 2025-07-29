@@ -897,7 +897,7 @@
               "color": "jexl:get(feature,'score') > 5 ? 'green' : 'red'"
             }
           },
-          "defaultRenderer": "LinePlotRenderer"
+          "defaultRenderer": "XYPlotRenderer"
         }
       ]
     },
