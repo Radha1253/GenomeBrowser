@@ -886,7 +886,7 @@
           "renderers": {
             "XYPlotRenderer": {
               "type": "XYPlotRenderer",
-              "color": "jexl:get(feature,'score') > 25 ? 'green' : 'red'"
+              "color": "jexl:get(feature,'score') > 5 ? 'green' : 'red'"
             },
             "DensityRenderer": {
               "type": "DensityRenderer",
