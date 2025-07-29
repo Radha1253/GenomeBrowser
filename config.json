@@ -667,7 +667,7 @@
       "adapter": {
         "type": "BigWigAdapter",
         "bigWigLocation": {
-          "uri": "test_data/nhp_any_oe_23.bw",
+          "uri": "https://radha1253.github.io/GenomeBrowser/test_data/nhp_any_oe_23.bw",
           "locationType": "UriLocation"
         }
       },
