@@ -2046,7 +2046,7 @@
             "displays": [
                 {
                     "type": "LinearWiggleDisplay",
-                    "displayId": "nhp_any_vir_length_display",
+                    "displayId": "nhp_syn_vir_length_display",
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
