@@ -579,32 +579,16 @@
   "assemblyNames": [
     "hg19"
   ],
-  "displays": [
-    {
-      "type": "LinearWiggleDisplay",
-      "displayId": "nhp_any_aa_na_total-LinearWiggleDisplay",
-      "color": {
-        "type": "jexl",
-        "expr": "value < 0 ? 'blue' : value > 10 ? 'red' : 'gray'"
-      },
-      "posColor": "red",
-      "negColor": "blue",
-      "scaleType": "linear",
-      "minScore": 0,
-      "maxScore": {
-        "type": "jexl",
-        "expr": "max(20, maxValue)"
-      },
-      "fillColor": {
-        "type": "jexl",
-        "expr": "value > 15 ? 'rgba(255,0,0,0.6)' : value > 10 ? 'rgba(255,165,0,0.6)' : 'rgba(128,128,128,0.6)'"
-      },
-      "mouseoverLabel": {
-        "type": "jexl",
-        "expr": "'Value: ' + round(value, 2) + ' at ' + start + '-' + end"
-      }
-    }
-  ]
+ "displays": [
+  {
+    "type": "LinearWiggleDisplay",
+    "displayId": "nhp_any_aa_na_total-LinearWiggleDisplay",
+    "posColor": "red",
+    "negColor": "blue",
+    "scaleType": "linear",
+    "minScore": 0
+  }
+]
 },
     {
       "type": "QuantitativeTrack",
