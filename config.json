@@ -891,7 +891,7 @@
             "DensityRenderer": {
               "type": "DensityRenderer",
               "color": "jexl:score > 5 ? 'green' : 'red'"
-            }
+            },
             "LinePlotRenderer": {
               "type": "LinePlotRenderer",
               "color": "jexl:score > 25 ? 'green' : 'red'"
