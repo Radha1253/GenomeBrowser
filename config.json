@@ -840,30 +840,30 @@
         "hg19"
       ]
     },
-    {
-      "type": "QuantitativeTrack",
-      "trackId": "nhp_any_sum_93_obs",
-      "name": "nhp_any_sum_93_obs",
-      "adapter": {
-        "type": "BigWigAdapter",
-        "bigWigLocation": {
-          "uri": "https://radha1253.github.io/GenomeBrowser/test_data/nhp_any_sum_93_obs.bw",
-          "locationType": "UriLocation"
-        }
-      },
-      "category": [
-        "NHP",
-        "BigWig",
-        "Quantitative"
-      ],
-      "assemblyNames": [
-        "hg19"
-      ]
-    },
-    {
+        {
+          "type": "QuantitativeTrack",
+          "trackId": "nhp_any_sum_93_obs",
+          "name": "nhp_any_sum_93_obs",
+          "adapter": {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "uri": "https://radha1253.github.io/GenomeBrowser/test_data/nhp_any_sum_93_obs.bw",
+              "locationType": "UriLocation"
+            }
+          },
+          "category": [
+            "NHP",
+            "BigWig",
+            "Quantitative"
+          ],
+          "assemblyNames": [
+            "hg19"
+          ]
+        },
+       {
       "type": "QuantitativeTrack",
       "trackId": "nhp_any_vir_length",
-      "name": "nhp_any_vir_length",
+      "name": "NHP Viral Length",
       "adapter": {
         "type": "BigWigAdapter",
         "bigWigLocation": {
@@ -886,16 +886,17 @@
           "renderers": {
             "XYPlotRenderer": {
               "type": "XYPlotRenderer",
-              "color": "jexl:get(feature,'score') > 25 ? 'green' : 'red'"
+              "color": "jexl:score > 25 ? 'green' : 'red'"
             },
             "DensityRenderer": {
               "type": "DensityRenderer",
-              "color": "jexl:get(feature,'score') > 25 ? 'green' : 'red'"
+              "color": "jexl:score > 25 ? 'green' : 'red'"
             }
           }
         }
       ]
     },
+
     {
       "type": "QuantitativeTrack",
       "trackId": "nhp_any_vir_position",
