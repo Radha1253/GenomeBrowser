@@ -50,6 +50,7 @@
           "type": "CytobandAdapter",
           "cytobandLocation": {
             "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/hg19/cytoBand.txt"
+            "locationType": "UriLocation"
           }
         }
       }
