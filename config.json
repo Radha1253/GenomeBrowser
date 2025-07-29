@@ -853,7 +853,7 @@
       "assemblyNames": [
         "hg19"
       ],
-     "displays": [
+      "displays": [
     {
       "type": "LinearWiggleDisplay",
       "displayId": "nhp_any_vir_length-LinearWiggleDisplay",
