@@ -890,7 +890,7 @@
             },
             "DensityRenderer": {
               "type": "DensityRenderer",
-              "color": "jexl:score > 25 ? 'green' : 'red'"
+              "color": "jexl:score > 5 ? 'green' : 'red'"
             }
           }
         }
