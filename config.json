@@ -886,6 +886,14 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
+                            "color": "jexl:get(feature, 'score') > 7 ? 'green' : 'red'"
+                        },
+                        "DotPlotRenderer": {
+                            "type": "DensityRenderer",
+                            "color": "jexl:get(feature, 'score') > 7 ? 'green' : 'red'"
+                        },
+                        "LinePlotRenderer": {
+                            "type": "LinePlotRenderer",
                             "color": "jexl:score > 7 ? 'green' : 'red'"
                         }
                     }
