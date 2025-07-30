@@ -655,36 +655,42 @@
             ]
         },
         {
-            "type": "QuantitativeTrack",
-            "trackId": "nhp_any_oe_23",
-            "name": "nhp_any_oe_23",
-            "adapter": {
-                "type": "BigWigAdapter",
-                "bigWigLocation": {
-                    "uri": "https://radha1253.github.io/GenomeBrowser/test_data/nhp_any_oe_23.bw",
-                    "locationType": "UriLocation"
-                }
-            },
-            "category": [
-                "NHP",
-                "BigWig",
-                "Quantitative"
-            ],
-            "assemblyNames": [
-                "hg19"
-            ],
-            "displays": [
+    "type": "QuantitativeTrack",
+    "trackId": "nhp_any_oe_23",
+    "name": "nhp_any_oe_23",
+    "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+            "uri": "https://radha1253.github.io/GenomeBrowser/test_data/nhp_any_oe_23.bw",
+            "locationType": "UriLocation"
+        }
+    },
+    "category": [
+        "NHP",
+        "BigWig",
+        "Quantitative"
+    ],
+    "assemblyNames": [
+        "hg19"
+    ],
+    "displays": [
                 {
                     "type": "LinearWiggleDisplay",
                     "displayId": "nhp_any_oe_23_display",
+                    "defaultRendering": "line",  
                     "renderers": {
+                        "LinePlotRenderer": {  
+                            "type": "LinePlotRenderer",
+                            "color": "jexl:get(feature, 'score') > 0.35 ? 'green' : 'red'",
+                            "lineWidth": 3
+                        },
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 0.5 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 0.35 ? 'green' : 'red'"
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
-                            "color": "jexl:get(feature, 'score') > 0.5 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 0.35 ? 'green' : 'red'"
                         }
                     }
                 }
