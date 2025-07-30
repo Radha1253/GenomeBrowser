@@ -1,8 +1,8 @@
 {
     "plugins": [
         {
-            "name": "Template",
-            "url": "plugins/jbrowse-plugin-template.umd.production.min.js"
+            "name": "MultilevelLinearView",
+            "url": "https://unpkg.com/jbrowse-plugin-multilevel-linear-view/dist/jbrowse-plugin-multilevel-linear-view.umd.production.min.js"
         }
     ],
     "assemblies": [
@@ -686,11 +686,11 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 7 ? 'green' : 'red'"
+                            "color": "jexl:get(feature, 'score') > 0.5 ? 'red' : '#ff7f7f'"
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
-                            "color": "jexl:get(feature, 'score') > 7 ? 'green' : 'red'"
+                            "color": "jexl:get(feature, 'score') > 0.5 ? 'green' : 'red'"
                         }
                     }
                 }
