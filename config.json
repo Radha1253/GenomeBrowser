@@ -1,10 +1,4 @@
 {
-    "plugins": [
-        {
-            "name": "MultilevelLinearView",
-            "url": "https://unpkg.com/jbrowse-plugin-multilevel-linear-view/dist/jbrowse-plugin-multilevel-linear-view.umd.production.min.js"
-        }
-    ],
     "assemblies": [
         {
             "name": "hg19",
