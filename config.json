@@ -677,13 +677,16 @@
                 {
                     "type": "LinearWiggleDisplay",
                     "displayId": "nhp_any_oe_23_display",
-                    "defaultRendering": "line", 
-                    "color": "jexl:score > 0.35 ? 'green' : 'red'",
+                    "defaultRendering": "line",
+                    "autoscale": "local",
+                    "scaleType": "linear",
+                    "bicolorPivot": 0.35,   
+                    "posColor": "green",
+                    "negColor": "red",
                     "renderers": {
                         "LinePlotRenderer": {  
                             "type": "LinePlotRenderer",
                             "lineWidth": 3,
-                            "color": "jexl:score > 0.35 ? 'green' : 'red'"
                         },
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
