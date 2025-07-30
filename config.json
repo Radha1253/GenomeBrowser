@@ -677,11 +677,11 @@
                 {
                     "type": "LinearWiggleDisplay",
                     "displayId": "nhp_any_oe_23_display",
-                    "defaultRendering": "line",  
+                    "defaultRendering": "line", 
+                    "color": "jexl:get(feature, 'score') > 0.35 ? 'green' : 'red'",
                     "renderers": {
                         "LinePlotRenderer": {  
                             "type": "LinePlotRenderer",
-                            "color": "jexl:feature.score > 5 ? 'green' : 'red'",
                             "lineWidth": 3
                         },
                         "XYPlotRenderer": {
