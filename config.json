@@ -678,7 +678,7 @@
                     "type": "LinearWiggleDisplay",
                     "displayId": "nhp_any_oe_23_display",
                     "defaultRendering": "line", 
-                    "color": "jexl:get(feature, 'score') > 0.35 ? 'green' : 'red'",
+                    "color": "jexl:score > 0.35 ? 'green' : 'red'",
                     "renderers": {
                         "LinePlotRenderer": {  
                             "type": "LinePlotRenderer",
