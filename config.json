@@ -682,7 +682,8 @@
                     "renderers": {
                         "LinePlotRenderer": {  
                             "type": "LinePlotRenderer",
-                            "lineWidth": 3
+                            "lineWidth": 3,
+                            "color": "jexl:score > 0.35 ? 'green' : 'red'"
                         },
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
