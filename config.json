@@ -686,11 +686,13 @@
                     "renderers": {
                         "LinePlotRenderer": {  
                             "type": "LinePlotRenderer",
-                            "lineWidth": 3,
+                            "lineWidth": 3
                         },
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 0.35 ? 'green' : 'red'"
+                            "color": "jexl:get(feature, 'score') > 0.35 ? 'green' : 'red'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -726,7 +728,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 0.35 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 0.35 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -762,7 +766,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 0.35 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 0.35 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -830,7 +836,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 12 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 12 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -866,7 +874,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 7 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 7 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -902,7 +912,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 20 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 20 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -938,7 +950,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 7 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 7 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -974,7 +988,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 55 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 55 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1010,7 +1026,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 18 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 18 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1218,7 +1236,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 0.3 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 0.3 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1254,7 +1274,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 0.2 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 0.2 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1290,7 +1312,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 0.25 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 0.25 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1358,7 +1382,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 7 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 7 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1394,7 +1420,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 5 ? 'green' : 'red'"
+                            "color": "jexl:get(feature, 'score') > 5 ? 'green' : 'red'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1430,7 +1458,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 18 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 18 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1466,7 +1496,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 5 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 5 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1502,7 +1534,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 7 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 7 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1538,7 +1572,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 7 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 7 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1750,7 +1786,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 0.6 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 0.6 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1786,7 +1824,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 1.2 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 1.2 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1822,7 +1862,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 0.6 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 0.6 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1850,6 +1892,18 @@
             ],
             "assemblyNames": [
                 "hg19"
+            ],
+            "displays": [
+                {
+                    "type": "LinearWiggleDisplay",
+                    "displayId": "nhp_any_prob_mu_display",
+                    "renderers": {
+                        "XYPlotRenderer": {
+                            "filled": false,
+                            "emphasized": true
+                        }
+                    }
+                }
             ]
         },
         {
@@ -1878,7 +1932,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 5 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 5 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1914,7 +1970,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 5 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 5 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1950,7 +2008,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 6 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 6 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -1986,7 +2046,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 7 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 7 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -2022,7 +2084,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 11 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 11 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
@@ -2058,7 +2122,9 @@
                     "renderers": {
                         "XYPlotRenderer": {
                             "type": "XYPlotRenderer",
-                            "color": "jexl:get(feature, 'score') > 10 ? '#305cde' : '#007fff'"
+                            "color": "jexl:get(feature, 'score') > 10 ? '#305cde' : '#007fff'",
+                            "filled": false,
+                            "emphasized": true
                         },
                         "DotPlotRenderer": {
                             "type": "DensityRenderer",
